@@ -1,7 +1,7 @@
 input.buttonA.onEvent(ButtonEvent.Click, function () {
     makerController.player1.press(ArcadeButton.Left)
     light.showRing(
-    `blue purple blue purple blue black black black black black`
+    `purple blue purple blue purple black black black black black`
     )
 })
 input.onGesture(Gesture.Shake, function () {
@@ -31,9 +31,9 @@ function background_music () {
     music.playTone(494, music.beat(BeatFraction.Half))
     music.rest(music.beat(BeatFraction.Half))
     music.playTone(523, music.beat(BeatFraction.Whole))
+    music.rest(music.beat(BeatFraction.Double))
 }
 light.setAll(0x00ff00)
-background_music()
 forever(function () {
 	
 })
