@@ -1,7 +1,14 @@
 input.onGesture(Gesture.Shake, function () {
-    light.stopAllAnimations()
-    light.showAnimation(light.rainbowAnimation, 1500)
-    makerController.player2.setButton(ArcadeButton.Down, true)
+    makerController.player1.setButton(ArcadeButton.A, true)
+    light.showRing(
+    `red yellow orange green blue purple red orange yellow green`
+    )
+    light.showRing(
+    `blue purple red orange yellow green blue purple red orange`
+    )
+    light.showRing(
+    `yellow green blue purple red orange yellow green blue purple`
+    )
 })
 function background_music2 () {
     music.playTone(392, music.beat(BeatFraction.Half))
@@ -74,12 +81,40 @@ function background_music () {
     music.rest(music.beat(BeatFraction.Half))
 }
 forever(function () {
-    light.showAnimation(light.cometAnimation, 500)
+    makerController.player1.setAnalog(ArcadeAnalogButton.LeftRight, input.acceleration(Dimension.X))
+})
+forever(function () {
+    background_music()
+})
+forever(function () {
     light.showRing(
-    `white pink white pink white purple blue purple blue purple`
+    `red white white white white white white white white white`
     )
-    light.showAnimation(light.cometAnimation, 500)
     light.showRing(
-    `blue purple blue purple blue purple pink purple pink purple`
+    `white orange white white white white white white white white`
+    )
+    light.showRing(
+    `white white yellow white white white white white white white`
+    )
+    light.showRing(
+    `white white white green white white white white white white`
+    )
+    light.showRing(
+    `white white white white blue white white white white white`
+    )
+    light.showRing(
+    `white white white white white purple white white white white`
+    )
+    light.showRing(
+    `white white white white white white red white white white`
+    )
+    light.showRing(
+    `white white white white white white white orange white white`
+    )
+    light.showRing(
+    `white white white white white white white white yellow white`
+    )
+    light.showRing(
+    `white white white white white white white white white green`
     )
 })
