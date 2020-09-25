@@ -10,7 +10,7 @@ input.onGesture(Gesture.Shake, function () {
 input.buttonB.onEvent(ButtonEvent.Click, function () {
     makerController.player1.press(ArcadeButton.B)
     light.showRing(
-    `black black black black black pink yellow pink yellow pink`
+    `black black black black black pink white pink white pink`
     )
 })
 function background_music () {
@@ -35,5 +35,12 @@ function background_music () {
 light.setAll(0x00ff00)
 background_music()
 forever(function () {
-	
+    light.showAnimation(light.cometAnimation, 500)
+    light.showRing(
+    `white pink white pink white purple blue purple blue purple`
+    )
+    light.showAnimation(light.cometAnimation, 500)
+    light.showRing(
+    `blue purple blue purple blue pink white pink white pink`
+    )
 })
