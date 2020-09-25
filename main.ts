@@ -1,17 +1,7 @@
-input.buttonA.onEvent(ButtonEvent.Click, function () {
-    makerController.player1.press(ArcadeButton.Left)
-    light.showRing(
-    `blue purple blue purple blue black black black black black`
-    )
-})
 input.onGesture(Gesture.Shake, function () {
+    light.stopAllAnimations()
     light.showAnimation(light.rainbowAnimation, 1000)
-})
-input.buttonB.onEvent(ButtonEvent.Click, function () {
-    makerController.player1.press(ArcadeButton.Right)
-    light.showRing(
-    `black black black black black pink white pink white pink`
-    )
+    makerController.player2.setButton(ArcadeButton.Down, true)
 })
 function background_music () {
     for (let index = 0; index < 1000; index++) {
@@ -31,12 +21,15 @@ function background_music () {
         music.playTone(440, music.beat(BeatFraction.Half))
         music.playTone(494, music.beat(BeatFraction.Half))
         music.rest(music.beat(BeatFraction.Half))
-        music.playTone(523, music.beat(BeatFraction.Whole))
-        music.rest(music.beat(BeatFraction.Double))
+        music.playTone(523, music.beat(BeatFraction.Double))
+        music.rest(music.beat(BeatFraction.Whole))
         music.rest(music.beat(BeatFraction.Half))
     }
 }
 light.setAll(0x00ff00)
+forever(function () {
+    background_music()
+})
 forever(function () {
     light.showAnimation(light.cometAnimation, 500)
     light.showRing(
@@ -44,9 +37,9 @@ forever(function () {
     )
     light.showAnimation(light.cometAnimation, 500)
     light.showRing(
-    `blue purple blue purple blue pink white pink white pink`
+    `blue purple blue purple blue purple pink purple pink purple`
     )
 })
 forever(function () {
-    background_music()
+    makerController.player1.setAnalog(ArcadeAnalogButton.LeftRight, input.acceleration(Dimension.X))
 })

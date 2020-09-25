@@ -4,7 +4,8 @@
     "dependencies": {
         "circuit-playground": "*",
         "servo": "*",
-        "maker-controller": "github:microsoft/pxt-maker-controller#v0.0.7"
+        "maker-controller": "github:microsoft/pxt-maker-controller#v0.0.7",
+        "datalogger": "*"
     },
     "files": [
         "main.blocks",
