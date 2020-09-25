@@ -73,7 +73,6 @@ function background_music () {
     music.rest(music.beat(BeatFraction.Whole))
     music.rest(music.beat(BeatFraction.Half))
 }
-light.setAll(0x00ff00)
 forever(function () {
     light.showAnimation(light.cometAnimation, 500)
     light.showRing(
