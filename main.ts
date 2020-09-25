@@ -11,7 +11,17 @@ input.buttonB.onEvent(ButtonEvent.Click, function () {
     `black black black black black pink yellow pink yellow pink`
     )
 })
+function background_music () {
+    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(523, music.beat(BeatFraction.Double))
+    music.rest(music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(587, music.beat(BeatFraction.Double))
+}
 light.setAll(0x00ff00)
+background_music()
 forever(function () {
 	
 })
