@@ -1,8 +1,57 @@
 input.onGesture(Gesture.Shake, function () {
     light.stopAllAnimations()
-    light.showAnimation(light.rainbowAnimation, 1000)
+    light.showAnimation(light.rainbowAnimation, 1500)
     makerController.player2.setButton(ArcadeButton.Down, true)
 })
+function background_music2 () {
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(330, music.beat(BeatFraction.Half))
+    music.rest(music.beat(BeatFraction.Double))
+    music.rest(music.beat(BeatFraction.Sixteenth))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(523, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(330, music.beat(BeatFraction.Half))
+    music.rest(music.beat(BeatFraction.Double))
+    music.rest(music.beat(BeatFraction.Sixteenth))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(523, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(330, music.beat(BeatFraction.Half))
+    music.rest(music.beat(BeatFraction.Double))
+    music.rest(music.beat(BeatFraction.Sixteenth))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(523, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.rest(music.beat(BeatFraction.Double))
+    music.rest(music.beat(BeatFraction.Sixteenth))
+}
 function background_music () {
     music.playTone(440, music.beat(BeatFraction.Half))
     music.playTone(494, music.beat(BeatFraction.Half))
@@ -26,9 +75,6 @@ function background_music () {
 }
 light.setAll(0x00ff00)
 forever(function () {
-	
-})
-forever(function () {
     light.showAnimation(light.cometAnimation, 500)
     light.showRing(
     `white pink white pink white purple blue purple blue purple`
@@ -37,7 +83,4 @@ forever(function () {
     light.showRing(
     `blue purple blue purple blue purple pink purple pink purple`
     )
-})
-forever(function () {
-    makerController.player1.setAnalog(ArcadeAnalogButton.LeftRight, input.acceleration(Dimension.X))
 })
